@@ -8,6 +8,9 @@
 
 #ifndef bridge_h
 #define bridge_h
-
+#import "Lib/AFNetworking/AFNetworking/AFNetworking.h"
+#import "YYWebImage/YYWebImage.h"
+#import "UIScrollView+Refresh.h"
+#import "EYEDeviceTool.h"
 
 #endif /* bridge_h */

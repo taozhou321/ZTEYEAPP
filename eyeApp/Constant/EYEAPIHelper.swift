@@ -6,4 +6,8 @@
 // Copyright © 2018年 周涛. All rights reserved..
 // github: https://github.com/taozhou321
 
-import Foundation
+
+
+struct EYEAPIHelper {
+    static let tabList = "https://baobab.kaiyanapp.com/api/v5/index/tab/list"
+}

@@ -6,4 +6,10 @@
 // Copyright © 2018年 周涛. All rights reserved..
 // github: https://github.com/taozhou321
 
-import Foundation
+import UIKit
+
+extension UIFont {
+    class func custom_FZLTCHJW(fontSize size: CGFloat) {
+        
+    }
+}

@@ -32,24 +32,23 @@ class EYELoadingPageView: UIView {
         self.loading_in_layer.bounds = self.bounds
         self.loading_in_layer.contents = #imageLiteral(resourceName: "ICON_Loading_In").cgImage
         self.loading_in_layer.position = self.center
-       
+        self.loading_in_layer.isHidden = true
         
         self.loading_out_layer_2 = CALayer()
         self.loading_out_layer_2.bounds = self.bounds
         self.loading_out_layer_2.contents = #imageLiteral(resourceName: "ICON_Loading_Out").cgImage
         self.loading_out_layer_2.opacity = 0.6
         self.loading_out_layer_2.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat.pi / 3))
-        
-        
         self.loading_out_layer_2.position = self.center
+        self.loading_out_layer_2.isHidden = true
         
         self.loading_out_layer_3 = CALayer()
         self.loading_out_layer_3.bounds = self.bounds
         self.loading_out_layer_3.contents = #imageLiteral(resourceName: "ICON_Loading_Out").cgImage
         self.loading_out_layer_3.opacity = 0.3
         self.loading_out_layer_3.setAffineTransform(CGAffineTransform(rotationAngle: 2 * CGFloat.pi / 3))
-        
         self.loading_out_layer_3.position = self.center
+        self.loading_out_layer_3.isHidden = true
         
         self.layer.addSublayer(self.loading_out_layer_3)
         self.layer.addSublayer(self.loading_out_layer_2)
@@ -59,6 +58,10 @@ class EYELoadingPageView: UIView {
     }
     
     func startLoadingAnimation() {
+        self.loading_out_layer_3.isHidden = false
+        self.loading_out_layer_2.isHidden = false
+        self.loading_in_layer.isHidden = false
+        
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
         animation.toValue = CGFloat.pi * 2
@@ -81,8 +84,12 @@ class EYELoadingPageView: UIView {
     }
     
     func stopLoadingAnimation() {
+        
         self.layer.removeAnimation(forKey: "loading_rotation_animation") //移除动画
         
+        self.loading_out_layer_3.isHidden = true
+        self.loading_out_layer_2.isHidden = true
+        self.loading_in_layer.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {

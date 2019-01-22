@@ -8,16 +8,23 @@
 
 import UIKit
 
-class EYELunchView: UIView {
+class EYELaunchView: UIView {
     @IBOutlet weak var blackBgView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+
+    
+    // 动画完成回调
+    typealias AnimationDidStopCallBack = (_ launchView : EYELaunchView) -> Void
+    var callBack : AnimationDidStopCallBack?
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         
+        startLunchAnimation()
     }
     
-    class func lunchView() -> EYELunchView? {
-        return Bundle.main.loadNibNamed("EYELunchView", owner: nil, options: nil)?.first as? EYELunchView
+    class func launchView() -> EYELaunchView? {
+        return Bundle.main.loadNibNamed("EYELaunchView", owner: nil, options: nil)?.first as? EYELaunchView
     }
     
     
@@ -28,9 +35,18 @@ class EYELunchView: UIView {
             self.imageView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             self.blackBgView.alpha = 0
         }) { [unowned self](_) in
-            
+            self.blackBgView.removeFromSuperview()
+            if let cb = self.callBack {
+                cb(self)
+            }
         }
     }
     
     //动画完成时的回调
+    /**
+     动画完成时回调
+     */
+    func animationDidStop(callBack: AnimationDidStopCallBack?) {
+        self.callBack = callBack
+    }
 }

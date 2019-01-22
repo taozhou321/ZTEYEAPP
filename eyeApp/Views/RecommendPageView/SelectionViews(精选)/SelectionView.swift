@@ -7,3 +7,20 @@
 // github: https://github.com/taozhou321
 
 import Foundation
+
+//精选视图
+
+class SelectionView: UIView {
+    @IBOutlet weak var headTitle: UILabel!
+    @IBOutlet weak var headSubTitle: UILabel!
+    @IBOutlet weak var selectionScrollView: UIScrollView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
+        
+    }
+    
+}

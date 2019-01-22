@@ -6,4 +6,9 @@
 // Copyright © 2019 周涛. All rights reserved..
 // github: https://github.com/taozhou321
 
-import Foundation
+import UIKit
+import MediaPlayer
+
+class EYEVolumeSliderView: MPVolumeView {
+    
+}

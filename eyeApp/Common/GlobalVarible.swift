@@ -6,4 +6,10 @@
 // Copyright © 2018年 周涛. All rights reserved..
 // github: https://github.com/taozhou321
 
-import Foundation
+
+let TabbarCount = 4
+
+let TabbarVC = "vc"
+let TabbarTitle = "title"
+let TabbarImage = "image"
+let TabbarSelectedImage = "selectedImage"

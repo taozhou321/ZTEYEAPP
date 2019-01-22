@@ -7,3 +7,18 @@
 // github: https://github.com/taozhou321
 
 import Foundation
+
+class TextCardViewCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var attentionBtn: UIButton!
+    
+    var textCardModel: TextCardModel! {
+        didSet {
+            self.titleLabel.text = self.textCardModel.data.text
+        }
+    }
+    
+    override func awakeFromNib() {
+        
+    }
+}

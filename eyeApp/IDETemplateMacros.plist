@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   IDETemplateMacros.plist
-   eyeApp
-
-   Created by 络威信 on 2018/10/8.
-   Copyright (c) 2018年 周涛. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>FILEHEADER</key>
+	<string>// ___FILENAME___
+// ___PACKAGENAME___
+//
+// Create by 周涛 on ___DATE___.
+// ___CORYRIGHT___.
+// github: https://github.com/taozhou321
+</string>
+</dict>
 </plist>

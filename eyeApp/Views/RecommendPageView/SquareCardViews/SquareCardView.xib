@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,24 +13,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SquareCardView" customModule="eyeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tY0-iA-sST">
-                    <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGh-Mz-ZJH">
-                    <rect key="frame" x="0.0" y="150" width="300" height="50"/>
+                    <rect key="frame" x="0.0" y="200" width="300" height="50"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sgs-8e-waE">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <rect key="frame" x="5" y="5" width="40" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="2O5-qG-FsC"/>
-                                <constraint firstAttribute="height" constant="50" id="gkb-Gv-e65"/>
+                                <constraint firstAttribute="width" constant="40" id="2O5-qG-FsC"/>
+                                <constraint firstAttribute="height" constant="40" id="gkb-Gv-e65"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2G-RL-1wb">
-                            <rect key="frame" x="55" y="3" width="185" height="21"/>
+                            <rect key="frame" x="50" y="3" width="190" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="4L4-XJ-C3V"/>
                             </constraints>
@@ -47,7 +47,7 @@
                             <state key="normal" image="action_share_grey"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCZ-i4-cF9">
-                            <rect key="frame" x="55" y="27" width="185" height="21"/>
+                            <rect key="frame" x="50" y="27" width="190" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="U6E-0V-4lA"/>
                             </constraints>
@@ -59,9 +59,9 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="OCZ-i4-cF9" firstAttribute="top" secondItem="A2G-RL-1wb" secondAttribute="bottom" constant="3" id="7YE-Wd-4LZ"/>
-                        <constraint firstItem="Sgs-8e-waE" firstAttribute="leading" secondItem="uGh-Mz-ZJH" secondAttribute="leading" id="HNq-sq-RJe"/>
+                        <constraint firstItem="Sgs-8e-waE" firstAttribute="leading" secondItem="uGh-Mz-ZJH" secondAttribute="leading" constant="5" id="HNq-sq-RJe"/>
                         <constraint firstItem="A2G-RL-1wb" firstAttribute="leading" secondItem="Sgs-8e-waE" secondAttribute="trailing" constant="5" id="Pdm-Wb-t8c"/>
-                        <constraint firstItem="Sgs-8e-waE" firstAttribute="top" secondItem="uGh-Mz-ZJH" secondAttribute="top" id="TQa-8w-CvI"/>
+                        <constraint firstItem="Sgs-8e-waE" firstAttribute="top" secondItem="uGh-Mz-ZJH" secondAttribute="top" constant="5" id="TQa-8w-CvI"/>
                         <constraint firstItem="OKC-kO-Yeh" firstAttribute="leading" secondItem="A2G-RL-1wb" secondAttribute="trailing" constant="20" id="lWk-Q1-1RE"/>
                         <constraint firstItem="OKC-kO-Yeh" firstAttribute="top" secondItem="uGh-Mz-ZJH" secondAttribute="top" constant="10" id="lod-Aw-Z8p"/>
                         <constraint firstItem="OKC-kO-Yeh" firstAttribute="leading" secondItem="OCZ-i4-cF9" secondAttribute="trailing" constant="20" id="mS5-bY-Ndg"/>
@@ -94,10 +94,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="coverImage" destination="tY0-iA-sST" id="rhV-9x-8Zy"/>
+                <outlet property="descriptionTitle" destination="OCZ-i4-cF9" id="q50-Yv-mI5"/>
                 <outlet property="profile_Photo" destination="Sgs-8e-waE" id="XoJ-q6-3mt"/>
-                <outlet property="subTitle" destination="OCZ-i4-cF9" id="RsT-Yc-dbw"/>
                 <outlet property="title" destination="A2G-RL-1wb" id="xVa-CD-eDM"/>
             </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="154.72263868065968"/>
         </view>
     </objects>
     <resources>
