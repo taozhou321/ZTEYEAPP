@@ -15,12 +15,14 @@ class ZTRefreshFooter: ZTRefreshComponent {
         super.init(frame: frame)
         self.addSubview(self.loadingView)
         self.isAutoChangeAlpha = false
+        self.loadingView.startLoadingAnimation()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.addSubview(self.loadingView)
         self.isAutoChangeAlpha = false
+        self.loadingView.startLoadingAnimation()
     }
     
     
@@ -33,10 +35,10 @@ class ZTRefreshFooter: ZTRefreshComponent {
     
     override var state: ZTRefreshState {
         didSet {
-            if self.state == oldValue {return}
+            //if self.state == oldValue {return}
             if self.state == .ZTRefreshStateIdle && oldValue == .ZTRefreshStateRefreshing {
                 self.loadingView.stopLoadingAnimation()
-                /*UIView.animate(withDuration: self.hideTimeInterval, animations: {
+               /* UIView.animate(withDuration: self.hideTimeInterval, animations: {
                     self.scrollView.insetBottom = self.scrollViewOriginalInset.bottom
                     
                 }) { (finished) in
@@ -64,6 +66,7 @@ class ZTRefreshFooter: ZTRefreshComponent {
         let happenOffsetY =  (self.scrollView.contentH + self.scrollViewOriginalInset.bottom) - self.scrollView.height
         let thresholdOffsetY = happenOffsetY  //判断状态改变的竖直方向上的阀值
         if happenOffsetY > offsetY {return}
+        
         let pullingPercent = (offsetY - happenOffsetY) / self.height
         
         if self.scrollView.isDragging {
@@ -77,6 +80,8 @@ class ZTRefreshFooter: ZTRefreshComponent {
         } else if self.state == .ZTRefreshStatePulling {
             self.state = .ZTRefreshStateRefreshing
         }
+ 
+ 
         /*else if self.state == .ZTRefreshStateIdle && pullingPercent < 1 {
             self.pullingPercent = pullingPercent
         }*/

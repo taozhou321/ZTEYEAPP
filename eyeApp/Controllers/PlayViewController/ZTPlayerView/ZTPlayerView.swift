@@ -95,7 +95,7 @@ class ZTProgressView: UIView {
         didSet {
             if isFullScreen {
                 self.fullScreenBtn.isHidden = true
-                self.smallScreenTimeLabel.isEnabled = true
+                self.smallScreenTimeLabel.isHidden = true
                 self.dismissalBtn.isHidden = true
                 self.exitFullScreenBtn.isHidden = false
                 

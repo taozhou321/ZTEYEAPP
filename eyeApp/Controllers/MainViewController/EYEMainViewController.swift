@@ -23,14 +23,14 @@ class EYEMainViewController: UITabBarController {
         self.delegate = self
 
        
-       /* // 添加launchView
+        // 添加launchView
         if launchView != nil {
             view.addSubview(launchView!)
         }
         // 动画完成回调
         launchView?.animationDidStop { [unowned self](launchView) in
             self.launchViewRemoveAnimation()
-        }*/
+        }
     }
     
     override func viewDidLayoutSubviews() {

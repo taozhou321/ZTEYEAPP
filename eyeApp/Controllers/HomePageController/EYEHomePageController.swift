@@ -195,8 +195,10 @@ class EYEHomePageController: EYEBaseViewController, UIScrollViewDelegate {
             var vc = UIViewController()
             if n == 1 {
                 vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EYERecommendPageController")
+            } else {
+                vc.view.backgroundColor = ZTRandomColor()
             }
-           // vc.view.backgroundColor = ZTRandomColor()
+           
             vc.view.tag = n
             self.addChildViewController(vc)
             segmentContainer.segmentArray.append(SegmentView(header: label, body: vc.view, headerButtom: UIView()))
